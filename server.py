@@ -18,7 +18,7 @@ def start_server(host='0.0.0.0', port=65432):
                 data = client_socket.recv(1024).decode('utf-8')
                 print(f"Получено сообщение: {data}")
                 # Отправляем ответ
-                response = f"Сообщение принято, вы написали: {data}"
+                response = f"Сообщение принято, друг, вы написали: {data}"
                 client_socket.sendall(response.encode('utf-8'))
 
 if __name__ == "__main__":
